@@ -53,10 +53,12 @@ class Main extends Component {
                         this.setState.isLoaded?
                             this.state.articles.map((article, index) => {
                                 return (
+
                                     <ArticleCard
-                                        key={index}
-                                        data={ article }
+                                        key     = { index }
+                                        data    = { article }
                                     />
+
                                     )
                             }): ""
                     }
