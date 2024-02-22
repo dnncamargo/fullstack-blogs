@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Container } from "reactstrap";
 import ArticleCard from "../../Components/ArticleCard/ArticleCard";
-import firebase from "../../Config/firebase";
+import firebase from "../../Config/firebase"
 
 const db = firebase.firestore()
 
@@ -51,7 +51,7 @@ class Main extends Component {
                 <Container>
                     {
                         this.setState.isLoaded?
-                            this.state.articles.map(article, index => {
+                            this.state.articles.map((article, index) => {
                                 return (
                                     <ArticleCard
                                         key={index}
