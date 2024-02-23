@@ -8,6 +8,7 @@ import {
     Badge 
 } from 'reactstrap'
 import classes from './ArticleCard.module.css'
+import { Link } from 'react-router-dom'
 
 export function timeStampToString(ts) {
     const date = new Date(ts*1000)
@@ -17,16 +18,20 @@ export function timeStampToString(ts) {
 const ArticleCard = (props) => {
     return (
         <Card className={classes.ArticleCard}>
-            <CardImg 
-                top
-                width='100%'
-                src="https://picsum.photos/200"
-                alt='Card Image'
-                className={classes.CardImage}
-            />
+            <Link to={'article/' + props.data.id}>
+                <CardImg 
+                    top
+                    width='100%'
+                    src="https://picsum.photos/200"
+                    alt='Card Image'
+                    className={classes.CardImage}
+                />
+            </Link>
             <CardBody className= {classes.CardBody} >
                 <CardTitle className= {classes.CardTitle} >
-                    {props.data.title}
+                    <Link to={'article/' + props.data.id}>
+                        {props.data.title}
+                    </Link>
                 </CardTitle>
                 <CardSubtitle className= {classes.CardSubtitle} >
                     <Badge className= {classes.ArticleLabel} >

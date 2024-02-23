@@ -32,16 +32,16 @@ class Heading extends Component {
     render() {
         return (
             <Navbar color='light' light expand='md'>
-                <NavbarBrand href='#'>My Blog</NavbarBrand>
+                <NavbarBrand href='/'>My Blog</NavbarBrand>
                 <NavbarToggler onClick={this.toggle} />
                 <Collapse isOpen={this.state.isOpen} navbar>
                     <Nav className='me-auto' navbar>
                         <NavItem>
-                            <NavLink href='/'>New Article</NavLink>
+                            <NavLink href='/newarticle'>New Article</NavLink>
                         </NavItem>
                     </Nav>
                     <UncontrolledDropdown nav inNavbar>
-                        <DropdownToggle className={classes.DropdownToggle} nav caret>
+                        <DropdownToggle nav caret>
                             Options
                         </DropdownToggle>
                         <DropdownMenu right dark>

@@ -28,7 +28,7 @@ class Main extends Component {
                     let allArticles = []
                     docs.forEach(function(doc) {
                         const article = {
-                            id: doc,
+                            id: doc.id,
                             ...doc.data()
                         }
                         allArticles.push(article)
@@ -50,20 +50,18 @@ class Main extends Component {
             <div>
                 <Container>
                     {
-                        this.setState.isLoaded?
+                        this.setState.isLoaded ?
                             this.state.articles.map((article, index) => {
                                 return (
-
                                     <ArticleCard
                                         key     = { index }
                                         data    = { article }
                                     />
-
                                     )
-                            }): ""
+                            })
+                            : ""
                     }
                 </Container>
-                
             </div>
         )
     }
